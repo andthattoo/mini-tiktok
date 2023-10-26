@@ -13,7 +13,7 @@ The dataset used for this project is [TikTok Trending Video Dataset](https://www
 Dataset consists of 1000 videos. 
 
 ## Tutorial
-You can find a detailed tutorial on how to build this app [here](https://andthattoo.substack.com/).
+You can find a detailed tutorial on how to build this app [here](https://andthattoo.substack.com/p/personalized-mini-tiktok).
 
 ## Features
 

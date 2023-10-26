@@ -92,6 +92,17 @@ st.title("TikTok Mini")
 st.header("", divider="rainbow")
 placeholder = st.empty()
 
+st.sidebar.title("How it works?")
+st.sidebar.markdown( """
+    Mini TikTok algorithm shapes your feed based on your watch time. 
+    More you spend time on a video, more it effects your feed.
+    Have fun!
+    
+    Note: Dataset is limited to 1000 videos, hence the name, mini TikTok 🥰.
+    Full [blog](https://andthattoo.substack.com/)
+    For SDK Reference: [FirstBatch SDK Docs](https://firstbatch.gitbook.io/firstbatch-sdk/get-started/introduction)
+    """)
+
 
 def display_video():
     with placeholder:
