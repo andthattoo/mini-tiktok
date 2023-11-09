@@ -14,13 +14,13 @@ CUSTOM_ALGO_ID = st.secrets["custom_algo_id"]
 
 def init():
     if 'personalized' not in st.session_state:
-        config = Config(batch_size=5, verbose=True, enable_history=True, embedding_size=384)
+        config = Config(batch_size=5, verbose=True, enable_history=True)
         personalized = FirstBatch(api_key=FIRST_BATCH_API_KEY, config=config)
         pinecone.init(api_key=PINECONE_API_KEY,
                       environment=PINECONE_ENV)
 
         index = pinecone.Index("tiktok")
-        personalized.add_vdb("tiktok_db_pinecone", Pinecone(index))
+        personalized.add_vdb("tiktok_db_pinecone", Pinecone(index, embedding_size=384))
         st.session_state.personalized = personalized
 
         st.session_state.session = st.session_state.personalized.session(AlgorithmLabel.CUSTOM,
